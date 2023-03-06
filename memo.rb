@@ -25,7 +25,7 @@ puts "1(新規でメモを作成)2(既存のメモを編集する)"
   input_memo = STDIN.read
   memo = input_memo.chomp
   
-  CSV.open("#{file_name}.csv" , "w") do |csv|
+  CSV.open("#{file_name}.csv" , "a") do |csv|
   csv.puts (["#{memo}"])
 end
 
